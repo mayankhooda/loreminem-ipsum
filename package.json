@@ -1,7 +1,7 @@
 {
-    "name": "eminem-ipsum",
-    "displayName": "Eminem Ipsum",
-    "description": "Slim Shady's very own Lorem Ipsum",
+    "name": "loreminem-ipsum",
+    "displayName": "LorEminem Ipsum",
+    "description": "Shady's very own Lorem Ipsum",
     "version": "0.0.1",
     "publisher": "mayankhooda",
     "engines": {
@@ -11,14 +11,33 @@
         "Other"
     ],
     "activationEvents": [
-        "onCommand:extension.sayHello"
+        "onCommand:extension.display",
+        "onCommand:extension.displayWorded"
     ],
-    "main": "./extension",
+    "main": "./src/extension",
     "contributes": {
         "commands": [
             {
-                "command": "extension.sayHello",
-                "title": "Hello World"
+                "command": "extension.display",
+                "title": "loreminem-ipsum"
+            },
+            {
+                "command": "extension.displayWorded",
+                "title": "loreminem-ipsum-words"
+            }
+        ],
+        "keybindings": [
+            {
+            "command": "extension.display",
+            "key": "ctrl+f1",
+            "mac": "cmd+f1",
+            "when": "editorTextFocus"
+            },
+            {
+            "command": "extension.displayWorded",
+            "key": "ctrl+f2",
+            "mac": "cmd+f2",
+            "when": "editorTextFocus"
             }
         ]
     },
